@@ -9,12 +9,22 @@ gem 'sqlite3'
 gem 'devise', '~> 2.2.3'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
+group :development, :test do
+	gem 'factory_girl_rails', '~> 4.2.1'
+	gem 'rspec-rails', '~> 2.13.0'
+end
+
+group :test do
+	gem 'capybara', '~> 2.1.0'
+end
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  
+	gem 'sass-rails',   '~> 3.2.3'
+	gem 'coffee-rails', '~> 3.2.1'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
