@@ -1,7 +1,7 @@
 <%= form_for(@user, :html => { :class => 'form-horizontal'} ) do |f| %>
 <% if @user.errors.any? %>
 <div class="alert">
-  <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being created:</h2>
+  <h2><%= Please fix the following pluralize(@user.errors.count, "error") %>:</h2>
 
   <ul>
     <% @blog.errors.full_messages.each do |msg| %>
