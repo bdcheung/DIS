@@ -15,5 +15,14 @@ class UsersController < ApplicationController
 	end
 	def edit
 	end
+	def destroy
+		if @user = User.find(params[:id])
+			@user.destroy
+			respond_to do |format| 
+				format.html { redirect_to users_path } 
+				format.xml { head :ok } 
+			end
+		end
+	end
 
 end

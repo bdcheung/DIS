@@ -7,9 +7,10 @@
 
 <p>
   <b>Content:</b>
-  <%= @blog.content %>
+  <%= simple_format(@blog.content) %>
 </p>
 
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Edit', edit_blog_path(@blog) %> |  
+<%= link_to 'Delete', @blog, method: :delete, data: { confirm: 'Are you sure?' } %> | 
 <%= link_to 'Back', blogs_path %>

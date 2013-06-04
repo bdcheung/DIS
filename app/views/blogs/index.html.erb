@@ -1,23 +1,17 @@
 <h1>Listing blogs</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table width=700>
 <% @blogs.each do |blog| %>
   <tr>
-    <td><%= blog.title %></td>
-    <td><%= blog.content %></td>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><strong><%= blog.title %></strong></td>
   </tr>
-<% end %>
+  <tr>
+    <td><%= truncate(blog.content, :length => 200, :separator => ' ', :omission => "...") %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Read More', blog %></td>
+  </tr>
+  <% end %>
 </table>
 
 <br />

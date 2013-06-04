@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
 	end
 
 	def about
+		@page_tite = "About"
 	end
 
 	def contact
